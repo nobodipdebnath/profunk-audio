@@ -116,13 +116,13 @@ body {
     border: none;
     border-radius: 0px 8px 8px 0px;
     cursor: pointer;
-
 }
 
 /* Sound Section */
 .sound-container{
     padding: 80px 10%;
 }
+
 .sound-contain{
     display: flex;
     justify-content: space-between;
@@ -437,6 +437,7 @@ body {
     font-size: 18px;
     margin-top: 32px;
     border: none;
+    cursor: pointer;
 }
 footer{
     padding: 80px 10% 0 10%;
@@ -509,6 +510,52 @@ a:hover{
 .mobile-menu{
     display: none;
 }
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 10px 5%;
+    }
+
+    .hero-title {
+        font-size: 60px;
+        text-align: center;
+    }
+
+    .links {
+        gap: 20px;
+        font-size: 18px;
+    }
+    .sound-cards, .sound-effect-contain, .popular-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .catalog-contain, .choose-contain  {
+        grid-template-columns: 1fr;
+    }
+    .email{
+        font-size: 24px;
+    }
+    .sound-container{
+        padding: 80px 3%;
+    }
+    .audio{
+        width: 65%;
+    }
+    .sound-title{
+        font-size: 40px;
+    }
+    .catalog-card-2{
+        border-top: 1px solid #E9E9EA;
+    }
+    .contact-image{
+        height: 80vh;
+        object-fit: cover;
+    }
+    .footer-container{
+        gap: 24px;
+    }
+}
+
 @media (max-width: 576px) {
 
     .navbar{
@@ -520,12 +567,12 @@ a:hover{
     position: fixed;
     flex-direction: column;
     right: -100%;
-    top: 83px;
+    top: 72px;
     width: 250px;
     background: #fff;
     transition: .5s;
     padding: 20px;
-}
+    }
 
     #links.active{
         right: 0;
@@ -541,38 +588,20 @@ a:hover{
         padding: 0 10px;
     }
 
-    .sound-cards{
+    .popular-container, .sound-cards, .sound-effect-contain, .catalog-contain, .choose-contain{
         grid-template-columns: 1fr;
     }
 
-    .popular-container{
-        grid-template-columns: 1fr;
-    }
-
-    .sound-effect-contain{
-        grid-template-columns: 1fr;
-    }
-
-    .catalog-contain{
-        grid-template-columns: 1fr;
-    }
-
-    .choose-contain{
-        grid-template-columns: 1fr;
-    }
-    .popular-header{
+    .popular-header, .choose-header, .sound-contain{
         flex-direction: column;
     }
     .catalog-card-2{
         border-top: 1px solid #E9E9EA;
     }
-    .choose-header{
-        flex-direction: column;
-    }
     .sound-description{
         text-align: center;
     }
-    .sound-title{
+    .sound-title, .contact-title{
         text-align: center;
         font-size: 40px;
     }
@@ -583,13 +612,9 @@ a:hover{
     .single-card{
         grid-column: span 1;
     }
-    .contact-image{
+    .contact-image, .hero-banner{
         height: 100vh;
         object-fit: cover;
-    }
-    .contact-title{
-        font-size: 40px;
-        text-align: center;
     }
     .footer-container{
         flex-direction: column;
@@ -610,29 +635,16 @@ a:hover{
         justify-content: center;
         align-items: center;
     }
-    .sound-contain{
-        flex-direction: column;
-    }
     .button-container{
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    .hero-banner{
-        height: 100vh;
-        object-fit: cover;
-    }
-    .choose-container{
-        padding: 0px 5%;
+    .choose-container, .contact-section, .sound-container {
+        padding: 40px 5%;
     }
     .catalog-small{
         grid-column: span 2;
-    }
-    .contact-section{
-        padding: 0xp 5%;
-    }
-    .sound-container{
-        padding: 0px 5%;
     }
     .card-contain{
         padding: 10px;
@@ -648,51 +660,8 @@ a:hover{
     }
     .mobile-menu i{
         font-size: 32px;
-
     }
-    .sound-effect-container{
+    .sound-effect-container, .catalog-container, .popular-sound{
         padding: 80px 5%;
-    }
-    .catalog-container{
-        padding: 80xp 5%;
-    }
-    .popular-sound{
-        padding: 80px 5%;
-    }
-}
-@media (max-width: 768px) {
-
-    .navbar{
-        padding: 10px 5%;
-    }
-
-    .links{
-        gap: 20px;
-        font-size: 18px;
-    }
-
-    .hero-title{
-        font-size: 60px;
-        text-align: center;
-    }
-
-    .sound-cards{
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .popular-container{
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .sound-effect-contain{
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .catalog-contain{
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .choose-contain{
-        grid-template-columns: repeat(1, 1fr);
     }
 }
