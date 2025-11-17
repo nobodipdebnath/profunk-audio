@@ -234,11 +234,16 @@ body {
     grid-column: span 1;
     position: relative;
 }
-.popular-image{
+.popular-image {
     height: 280px;
     width: 100%;
     object-fit: cover;
     border-radius: 16px;
+
+    &:hover {
+        transform: scale(1.05);
+        transition: 0.5s;
+    }
 }
 .popular-title{
     position: absolute;
