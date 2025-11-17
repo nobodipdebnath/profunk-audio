@@ -157,6 +157,7 @@ body {
 }
 .card-image{
     border-radius: 12px;
+    height: 80px;
 }
 .card-header{
     display: flex;
@@ -505,14 +506,29 @@ a:hover{
     border-radius: 8px;
     cursor: pointer;
 }
+.mobile-menu{
+    display: none;
+}
 @media (max-width: 576px) {
 
     .navbar{
         padding: 8px 4%;
+        position: relative;
     }
 
-    .links{
-        display: none;
+    #links{
+    position: fixed;
+    flex-direction: column;
+    right: -100%;
+    top: 83px;
+    width: 250px;
+    background: #fff;
+    transition: .5s;
+    padding: 20px;
+}
+
+    #links.active{
+        right: 0;
     }
 
     .hero-title{
@@ -605,6 +621,43 @@ a:hover{
     .hero-banner{
         height: 100vh;
         object-fit: cover;
+    }
+    .choose-container{
+        padding: 0px 5%;
+    }
+    .catalog-small{
+        grid-column: span 2;
+    }
+    .contact-section{
+        padding: 0xp 5%;
+    }
+    .sound-container{
+        padding: 0px 5%;
+    }
+    .card-contain{
+        padding: 10px;
+    }
+    .card-image{
+        height: 60px;
+    }
+    .audio{
+        width: 60%;
+    }
+    .mobile-menu{
+        display: block;
+    }
+    .mobile-menu i{
+        font-size: 32px;
+
+    }
+    .sound-effect-container{
+        padding: 80px 5%;
+    }
+    .catalog-container{
+        padding: 80xp 5%;
+    }
+    .popular-sound{
+        padding: 80px 5%;
     }
 }
 @media (max-width: 768px) {
